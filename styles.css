@@ -7,8 +7,6 @@
     top: 25px;
     z-index: 1001; /* Ensure it displays above other elements */
 }
-
-/* Side navigation styling */
 .mobile-nav {
     height: 100%;
     width: 0;
@@ -20,19 +18,24 @@
     overflow-x: hidden;
     transition: width 0.5s ease;
     padding-top: 60px;
+    display: flex; /* Thêm dòng này */
+    flex-direction: column; /* Thay đổi thành cột */
+    align-items: flex-start; /* Canh trái các mục */
 }
+
 .mobile-nav.open {
     width: 80%; /* Adjust width as needed */
 }
 
 /* Links inside the mobile nav */
 .mobile-nav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 32px; /* Thay đổi padding cho đều */
     text-decoration: none;
     font-size: 25px;
     color: #fff;
     display: block;
     transition: 0.3s;
+    width: 100%; /* Đảm bảo mỗi mục chiếm 100% chiều rộng */
 }
 
 /* Close button */
