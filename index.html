@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESP32 SHOP</title>
+    <title>Fragrance Inspired</title>
     <style>
         /* Universal Reset */
         * {
@@ -13,82 +13,95 @@
         }
 
         body {
-            font-family: 'Time New Roman ', Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
             color: #333;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
+        /* Header Styling */
         header {
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 2rem;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        main {
-            padding: 2rem;
-            flex: 1;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
         }
 
-        h2 {
-            color: #ffffff;
-            margin-bottom: 1rem;
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 20px;
         }
 
-        p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #ffffff;
-            color: rgb(10, 9, 9);
-            text-align: center;
-            padding: 1.5rem;
-            position: relative;
-        }
-
-        a {
-            color: #7b6b66;
+        nav a {
             text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 2px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                font-size: 1.2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
+        /* Logo */
+        .logo img {
+            max-width: 150px; /* Set width of logo */
+            height: auto; /* Keep the aspect ratio */
         }
+
+        /* Icon section (user, search, cart) */
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Full-width Image */
+        .hero {
+            position: relative;
+            width: 100%;
+        }
+
+        .hero video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Balankeco </h1>
-    </header>
-    <main>
-        <h2>Welcome to the Improved Version</h2>
-        <p>We <b>design</b> what we <b>love</b></p>
-    </main>
+        <!-- Left Navigation -->
+        <nav>
+            <a href="#">FRAGRANCES</a>
+            <a href="#">CANDLES</a>
+            <a href="#">NEWS</a>
+        </nav>
 
-    <footer>
-        <p>Contact: <a href="mailto:xxjeanxx80@gmail.com">xxjeanxx80@gmail.com</a></p>
-    </footer>
+        <!-- Center Logo -->
+        <div class="logo">
+            <img src="C:\Users\xxjea\OneDrive\Documents\GitHub\xxjeanxx80.github.io\images\Header -logo.png" alt="Logo"> 
+        </div>
+
+        <!-- Right Icons (e.g., language, account, search, cart) -->
+        <div class="icons">
+            <img src="flag-icon.png" alt="Flag Icon"> <!-- Replace with actual icon/image -->
+            <img src="search-icon.png" alt="Search Icon"> <!-- Replace with actual icon/image -->
+            <img src="cart-icon.png" alt="Cart Icon"> <!-- Replace with actual icon/image -->
+        </div>
+    </header>
+
+    <!-- Full-width Hero Image -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="C:\Users\xxjea\OneDrive\Documents\GitHub\xxjeanxx80.github.io\Videos\videoplayback.webm" type="video/mp4">
+        </video>
+    </div>
 
 </body>
 </html>
-
