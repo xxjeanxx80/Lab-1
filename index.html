@@ -27,28 +27,28 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 90px; /* Increase header height to double */
+            height: 90px; /* Độ cao header */
             background-color: #f4f4f4;
             padding: 0 20px;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+                }
         /* Navigation */
         nav {
-            flex: 1;
-            display: flex;
-            justify-content: flex-start;
-            gap: 20px; /* Spacing between each nav link */
-        }
-        nav a {
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 14px;
-            color: #333;
-            margin-left: 35px; /* Extra space from left */
-            transition: color 0.3s;
-        }
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 50px; /* Khoảng cách giữa các mục điều hướng */
+            }
+            nav a {
+                text-decoration: none;
+                font-family: 'Playfair Display', serif;
+                font-weight: 400;
+                font-size: 16px; /* Kích thước font điều hướng */
+                color: #333;
+                transition: color 0.3s;
+                }
+
         nav a:hover {
             color: #000;
         }
@@ -73,6 +73,7 @@
         .icons img {
             width: 20px;
             height: 20px;
+            margin-left: 20px;
         }
 
         /* Full-width Image */
@@ -147,12 +148,14 @@
     <header>
         <!-- Left Navigation -->
         <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+
         <div id="mobile-nav" class="mobile-nav"></div>
             <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
             <a href="#">FRAGRANCES</a>
             <a href="#">CANDLES</a>
             <a href="#">NEWS</a>
         </div>
+
         <!-- Center Logo -->
         <div class="logo">
             <img src="https://xxjeanxx80.github.io/images/Header%20-logo.png" alt="Logo"> 
@@ -165,7 +168,9 @@
             <img src="https://xxjeanxx80.github.io/images/carticon.png" alt="Cart Icon"> 
         </div>
     </header>
+
     <script src="scripts.js"></script>
+
     <div class="hero">
         <video muted loop playsinline autoplay id="hero-video">
             <source src="https://xxjeanxx80.github.io/Videos/videoplayback.webm" type="video/webm">

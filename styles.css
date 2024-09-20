@@ -2,7 +2,7 @@
 .hamburger {
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Hidden by default */
+    display: none; /* Ẩn mặc định */
     position: absolute;
     left: 20px;
     top: 25px;
