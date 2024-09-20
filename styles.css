@@ -14,13 +14,16 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1000; /* Đảm bảo di chuyển phía trên các phần tử khác */
+    z-index: 1000;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: width 0.5s ease;
     padding-top: 60px;
+}
+.mobile-nav.open {
+    width: 80%; /* Chiếm 80% màn hình, bạn có thể thay đổi theo mong muốn */
 }
 
 /* Links inside the mobile nav */
@@ -53,9 +56,10 @@
 }
 
 /* Display hamburger and mobile nav for small screens */
+
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: block; /* Hiển thị biểu tượng hamburger cho màn hình nhỏ hơn 768px */
+        display: block;
     }
 
     .mobile-nav {
