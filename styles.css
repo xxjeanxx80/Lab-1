@@ -1,12 +1,11 @@
-/* Hamburger menu icon */
 .hamburger {
-    font-size: 30px;
+    font-size: 16px;
     cursor: pointer;
-    display: none; /* Ẩn mặc định */
+    display: none; /* Hidden by default */
     position: absolute;
     left: 20px;
     top: 25px;
-    z-index: 1001; /* Đảm bảo hiển thị trên các phần tử khác */
+    z-index: 1001; /* Ensure it displays above other elements */
 }
 
 /* Side navigation styling */
@@ -23,7 +22,7 @@
     padding-top: 60px;
 }
 .mobile-nav.open {
-    width: 80%; /* Chiếm 80% màn hình, bạn có thể thay đổi theo mong muốn */
+    width: 80%; /* Adjust width as needed */
 }
 
 /* Links inside the mobile nav */
@@ -48,21 +47,16 @@
 /* Hide nav for larger screens */
 @media screen and (min-width: 768px) {
     .mobile-nav { 
-        display: none; /* Ẩn menu cho màn hình lớn hơn 768px */
+        display: none; /* Hide menu on larger screens */
     }
     .hamburger { 
-        display: none; /* Ẩn biểu tượng hamburger */
+        display: none; /* Hide hamburger icon */
     }
 }
 
 /* Display hamburger and mobile nav for small screens */
-
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: block;
-    }
-
-    .mobile-nav {
         display: block;
     }
 }

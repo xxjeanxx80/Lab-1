@@ -1,8 +1,11 @@
 function toggleNav() {
     var nav = document.getElementById("mobile-nav");
-    if (nav.style.width === "250px") {
-        nav.style.width = "0"; // Close the nav
+    if (nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        nav.style.width = "0"; // Close the menu
     } else {
-        nav.style.width = "250px"; // Open the nav
+        nav.classList.add("open");
+        nav.style.width = "80%"; // Open the menu
     }
 }
+
