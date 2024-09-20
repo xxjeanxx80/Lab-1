@@ -6,7 +6,7 @@
     position: absolute;
     left: 20px;
     top: 25px;
-    z-index: 1001;
+    z-index: 1001; /* Đảm bảo hiển thị trên các phần tử khác */
 }
 
 /* Side navigation styling */
@@ -14,12 +14,12 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1000;
+    z-index: 1000; /* Đảm bảo di chuyển phía trên các phần tử khác */
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: width 0.5s ease;
     padding-top: 60px;
 }
 
@@ -39,21 +39,26 @@
     top: 0;
     right: 25px;
     font-size: 36px;
+    color: #fff;
 }
 
 /* Hide nav for larger screens */
 @media screen and (min-width: 768px) {
     .mobile-nav { 
-        display: none; 
+        display: none; /* Ẩn menu cho màn hình lớn hơn 768px */
     }
     .hamburger { 
-        display: none; 
+        display: none; /* Ẩn biểu tượng hamburger */
     }
 }
 
 /* Display hamburger and mobile nav for small screens */
 @media screen and (max-width: 768px) {
     .hamburger {
+        display: block; /* Hiển thị biểu tượng hamburger cho màn hình nhỏ hơn 768px */
+    }
+
+    .mobile-nav {
         display: block;
     }
 }
