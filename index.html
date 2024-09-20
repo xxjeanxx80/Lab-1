@@ -11,13 +11,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
             color: #333;
         }
-
         /* Header Styling */
         header {
             display: flex;
@@ -26,23 +24,33 @@
             padding: 20px;
             background-color: #fff;
             border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-
         /* Navigation */
         nav {
             display: flex;
             gap: 20px;
+            font-family: "Avenir Next", sans-serif; /* Use Avenir Next or fallback */
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-size: 14px;
         }
-
         nav a {
             text-decoration: none;
             color: #333;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 2px;
+        }
+        nav a:hover {
+            color: #000;
         }
 
         /* Logo */
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .logo img {
             max-width: 150px; /* Set width of logo */
             height: auto; /* Keep the aspect ratio */
@@ -70,6 +78,59 @@
             height: auto;
             display: block;
         }
+        .products-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            margin-bottom: 40px;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            color: #d9534f;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .sold-out {
+            color: #999;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            height: 2000px; /* Just for demonstration of scrolling */
+        }
 
     </style>
 </head>
@@ -90,9 +151,9 @@
 
         <!-- Right Icons (e.g., language, account, search, cart) -->
         <div class="icons">
-            <img src="flag-icon.png" alt="Flag Icon"> <!-- Replace with actual icon/image -->
-            <img src="search-icon.png" alt="Search Icon"> <!-- Replace with actual icon/image -->
-            <img src="cart-icon.png" alt="Cart Icon"> <!-- Replace with actual icon/image -->
+            <img src="https://xxjeanxx80.github.io/images/iconaccount.jpng" alt="Flag Icon"> <!-- Replace with actual icon/image -->
+            <img src="https://xxjeanxx80.github.io/images/search.svg" alt="Search Icon"> <!-- Replace with actual icon/image -->
+            <img src="https://xxjeanxx80.github.io/images/carticon.svg" alt="Cart Icon"> <!-- Replace with actual icon/image -->
         </div>
     </header>
 
@@ -102,6 +163,45 @@
             <source src="https://xxjeanxx80.github.io/Videos/videoplayback.webm" type="video/webm">
         </video>
     </div>
+
+    <section class="products-section">
+        <h6>FRAGRANCES</h6> 
+        <h2>FOR MEN</h2>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="product1.png" alt="Fragrance 1">
+                <h3>Fragrance 1</h3>
+                <div class="price">$99.00</div>
+                <div class="sold-out">SOLD OUT</div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="product2.png" alt="Fragrance 2">
+                <h3>Fragrance 2</h3>
+                <div class="price">$89.00</div>
+                <div class="sold-out">SOLD OUT</div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="product3.png" alt="Fragrance 3">
+                <h3>Fragrance 3</h3>
+                <div class="price">$109.00</div>
+                <div class="sold-out">SOLD OUT</div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="product4.png" alt="Fragrance 4">
+                <h3>Fragrance 4</h3>
+                <div class="price">$79.00</div>
+                <div class="sold-out">SOLD OUT</div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
