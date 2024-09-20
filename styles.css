@@ -1,0 +1,59 @@
+/* Hamburger menu icon */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    z-index: 1001;
+}
+
+/* Side navigation styling */
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Links inside the mobile nav */
+.mobile-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Close button */
+.mobile-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Hide nav for larger screens */
+@media screen and (min-width: 768px) {
+    .mobile-nav { 
+        display: none; 
+    }
+    .hamburger { 
+        display: none; 
+    }
+}
+
+/* Display hamburger and mobile nav for small screens */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}

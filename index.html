@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fragrance Inspired</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* Universal Reset */
         * {
@@ -145,12 +146,13 @@
 
     <header>
         <!-- Left Navigation -->
-        <nav>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+        <div id="mobile-nav" class="mobile-nav"></div>
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
             <a href="#">FRAGRANCES</a>
             <a href="#">CANDLES</a>
             <a href="#">NEWS</a>
-        </nav>
-
+        </div>
         <!-- Center Logo -->
         <div class="logo">
             <img src="https://xxjeanxx80.github.io/images/Header%20-logo.png" alt="Logo"> 
@@ -163,7 +165,7 @@
             <img src="https://xxjeanxx80.github.io/images/carticon.png" alt="Cart Icon"> 
         </div>
     </header>
-
+    <script src="scripts.js"></script>
     <div class="hero">
         <video muted loop playsinline autoplay id="hero-video">
             <source src="https://xxjeanxx80.github.io/Videos/videoplayback.webm" type="video/webm">
