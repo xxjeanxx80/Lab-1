@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fragrance Inspired</title>
@@ -12,7 +13,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             background-color: #fff;
             color: #333;
         }
@@ -21,25 +22,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            height: 90px; /* Increase header height to double */
+            background-color: #f4f4f4;
+            padding: 0 20px;
             z-index: 1000;
-        }
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
         /* Navigation */
         nav {
+            flex: 1;
             display: flex;
-            gap: 20px;
-            font-family: "Avenir Next", sans-serif; /* Use Avenir Next or fallback */
-            font-weight: 500;
-            letter-spacing: 2px;
-            font-size: 14px;
+            justify-content: flex-start;
+            gap: 20px; /* Spacing between each nav link */
         }
         nav a {
             text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 14px;
             color: #333;
+            margin-left: 35px; /* Extra space from left */
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #000;
@@ -52,14 +59,14 @@
             transform: translateX(-50%);
         }
         .logo img {
-            max-width: 150px; /* Set width of logo */
+            max-width: 170px; /* Set width of logo */
             height: auto; /* Keep the aspect ratio */
         }
 
         /* Icon section (user, search, cart) */
-        .icons {
-            display: flex;
-            gap: 15px;
+        .icon {
+            flex: 1;
+            text-align: right;
         }
 
         .icons img {
@@ -151,9 +158,9 @@
 
         <!-- Right Icons (e.g., language, account, search, cart) -->
         <div class="icons">
-            <img src="https://xxjeanxx80.github.io/images/iconaccount.jpng" alt="Flag Icon"> <!-- Replace with actual icon/image -->
-            <img src="https://xxjeanxx80.github.io/images/search.svg" alt="Search Icon"> <!-- Replace with actual icon/image -->
-            <img src="https://xxjeanxx80.github.io/images/carticon.png" alt="Cart Icon"> <!-- Replace with actual icon/image -->
+            <img src="https://xxjeanxx80.github.io/images/iconaccount.jpng" alt="Flag Icon"> 
+            <img src="https://xxjeanxx80.github.io/images/search.svg" alt="Search Icon">
+            <img src="https://xxjeanxx80.github.io/images/carticon.png" alt="Cart Icon"> 
         </div>
     </header>
 
