@@ -1,6 +1,28 @@
-.list {
-    color:red;
+.container {
+    width : 500px;
+    margin : 0 auto;
+    padding : 20px;
+    border : 2px solid #333;
+    background-color: #f7f381;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+}  
+.center{
+    text-align: center;
 }
-.list2 {
-    font-size:langer;
+body {
+    font-family: Playfair Display, serif;
+    line-height: 1.6;
+    font-size : 20px;
+
+}
+.red {
+    color:red;
+    margin: 20px;
+}
+.blue {
+    color:blue;
+    margin: 20px;
+}
+.list {
+    margin: 20px;
 }
