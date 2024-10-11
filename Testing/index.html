@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unseen studio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            color: #333;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            background-image: url('/placeholder.svg?height=1080&width=1920');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        nav a, nav button {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            font-size: 0.9rem;
+        }
+        nav button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        main {
+            text-align: center;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        h1 .italic {
+            font-style: italic;
+            font-weight: 300;
+        }
+        .cta {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rebrand {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .copyright {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">unseen studio</div>
+            <nav>
+                <a href="#">Index</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+                <button>&#8942;</button>
+            </nav>
+        </header>
+        <main>
+            <p class="subtitle">A BRAND, DIGITAL & MOTION STUDIO</p>
+            <h1><span class="italic">Creating the</span><br>unexpected</h1>
+            <button class="cta">View our work</button>
+        </main>
+        <footer>
+            <button class="rebrand">Read about our rebrand</button>
+            <div class="copyright">
+                &#127760; &copy;2023
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
