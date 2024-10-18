@@ -1,0 +1,33 @@
+body {
+    font-family: Playfair Display, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background:#be8383;
+}
+
+nav#topmenu ul{
+    list-style-type: none;
+    background-color: #444;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav#topmenu li {
+    font-size: 24px;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+    padding: 20px;
+}
+nav#topmenu a{
+    text-decoration: none;
+    color:#fff;
+}
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+}
