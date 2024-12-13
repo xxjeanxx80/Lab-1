@@ -38,7 +38,7 @@
         <br>
         <div>
             <label for="phoneNumber">Phone Number:</label><br>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" oninput="validateField(this)">
+            <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Enter your phone number" oninput="validateField(this)">
             <br>
             <span id="phoneNumberError" style="color: red;"></span>
         </div>
@@ -78,8 +78,8 @@
                     }
                     break;
                 case 'phoneNumber':
-                    if (!/^\d{3}-\d{3}-\d{4}$/.test(field.value)) {
-                        errorSpan.textContent = 'Please enter a valid phone number (XXX-XXX-XXXX)';
+                    if (!/^\+?[0-9]{10,14}$/.test(field.value.replace(/[\s()-]/g, ''))) {
+                        errorSpan.textContent = 'Please enter a valid phone number';
                         field.style.border = '1px solid red';
                     }
                     break;
