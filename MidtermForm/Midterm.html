@@ -3,71 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Improved Form</title>
+    <title>Registration Form</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Registration Form</h1>
-        <form>
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-            
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            
-            <div>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
-            </div>
-            
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120">
-            </div>
-            
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8">
-            </div>
-            
-            <div>
-                <label for="gender">Gender:</label>
-                <select name="gender" id="gender">
-                    <option value="">Select gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="prefer_not_to_say">Prefer not to say</option>
-                </select>
-            </div>
-            
-            <fieldset>
-                <legend>Gender (Alternative):</legend>
-                <div class="radio-group">
-                    <input type="radio" id="male" value="Male" name="gender2">
-                    <label for="male">Male</label>
-                    
-                    <input type="radio" id="female" value="Female" name="gender2">
-                    <label for="female">Female</label>
-                    
-                    <input type="radio" id="other" value="Other" name="gender2">
-                    <label for="other">Other</label>
-                    
-                    <input type="radio" id="prefer_not_to_say" value="Prefer not to say" name="gender2">
-                    <label for="prefer_not_to_say">Prefer not to say</label>
-                </div>
-            </fieldset>
-            
-            <div class="buttons">
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </div>
-        </form>
-    </div>
+    <h2>Register</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <div>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required minlength="3" oninput="validateField(this)">
+            <br>
+            <span id="usernameError" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required oninput="validateField(this)">
+            <br>
+            <span id="emailError" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required minlength="8" oninput="validateField(this)">
+            <br>
+            <span id="passwordError" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required oninput="validateField(this)">
+            <br>
+            <span id="confirmPasswordError" style="color: red;"></span>
+        </div>
+        <br>
+        <div>
+            <label for="phoneNumber">Phone Number:</label><br>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" oninput="validateField(this)">
+            <br>
+            <span id="phoneNumberError" style="color: red;"></span>
+        </div>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateField(field) {
+            const errorSpan = document.getElementById(field.id + 'Error');
+            field.style.border = '';
+            errorSpan.textContent = '';
+
+            switch(field.id) {
+                case 'username':
+                    if (field.value.length < 3) {
+                        errorSpan.textContent = 'Username must be at least 3 characters long';
+                        field.style.border = '1px solid red';
+                    }
+                    break;
+                case 'email':
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                        errorSpan.textContent = 'Please enter a valid email address';
+                        field.style.border = '1px solid red';
+                    }
+                    break;
+                case 'password':
+                    if (!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/.test(field.value)) {
+                        errorSpan.textContent = 'Password must be at least 8 characters long and contain at least one number and one special character';
+                        field.style.border = '1px solid red';
+                    }
+                    break;
+                case 'confirmPassword':
+                    if (field.value !== document.getElementById('password').value) {
+                        errorSpan.textContent = 'Passwords must match';
+                        field.style.border = '1px solid red';
+                    }
+                    break;
+                case 'phoneNumber':
+                    if (!/^\d{3}-\d{3}-\d{4}$/.test(field.value)) {
+                        errorSpan.textContent = 'Please enter a valid phone number (XXX-XXX-XXXX)';
+                        field.style.border = '1px solid red';
+                    }
+                    break;
+            }
+        }
+
+        function validateForm() {
+            const fields = ['username', 'email', 'password', 'confirmPassword', 'phoneNumber'];
+            let isValid = true;
+
+            fields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                validateField(field);
+                if (document.getElementById(fieldId + 'Error').textContent !== '') {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                alert('Registration successful!');
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
