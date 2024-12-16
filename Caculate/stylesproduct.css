@@ -1,0 +1,124 @@
+/* Product Section */
+.products-grid {
+    display: flex;
+    justify-content: flex-start; /* Căn sản phẩm về trái */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu thiếu chỗ */
+}
+
+.product-card {
+    width: 280px; /* Kích thước lớn hơn cho sản phẩm */
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center; /* Căn giữa nội dung bên trong */
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+/* Cân đối khoảng trống trên ảnh */
+.product-card img {
+    margin-top: 20px; /* Thêm khoảng trống bên trên */
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá thẻ chứa */
+    height: auto;
+}
+.product-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.rating {
+    margin: 10px 0;
+    color: gold;
+}
+
+.price {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+}
+
+.installments {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.quantity {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.buy-now {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info-icons p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-icons i {
+    margin-right: 10px;
+}
+
+/* Countdown Timer */
+.countdown {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.countdown .timer {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.time-units span {
+    margin: 0 10px;
+}

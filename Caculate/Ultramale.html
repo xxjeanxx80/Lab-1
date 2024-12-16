@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="stylesproduct.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">FRA.DUC.GRANES</div>
+        <nav>
+            <a href="#">FRAGRANCES</a>
+            <a href="#">CANDLES</a>
+            <a href="#">NEWS</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-image">
+            <img src="images/Ultramale.png" alt="Office Deodorant">
+        </div>
+        <div class="product-details">
+            <h1>OFFICE DEODORANT</h1>
+            <p class="sub-title">Jean Paul Gaultier Ultra Male EDT</p>
+            <div class="rating">
+                <span>★★★★★</span>
+                <span>852 Reviews</span>
+            </div>
+            <p class="price">$179.00 <span class="old-price">$270.00</span></p>
+            <p class="installments">4 interest-free installments, or from <strong>$16.16</strong>/mo with ShopPay</p>
+            <div class="quantity">
+                <button id="decrease">-</button>
+                <input type="text" id="quantity" value="1">
+                <button id="increase">+</button>
+            </div>
+            <button class="buy-now">Add to Cart</button>
+            <div class="info-icons">
+                <p><i class="fas fa-globe"></i> VIE only</p>
+                <p><i class="fas fa-clock"></i> Limited Drop</p>
+                <p><i class="fas fa-truck"></i> Free Shipping</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown">
+        <p>Xmas Special ends in:</p>
+        <div class="timer" id="timer">10 : 03 : 42 : 16</div>
+        <div class="time-units">
+            <span>Days</span> <span>Hrs</span> <span>Mins</span> <span>Secs</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
